@@ -1,0 +1,59 @@
+<DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+a:link {
+    color: black;
+    background-color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: blue;
+    background-color: white;
+    padding: 5px;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: green;
+    background-color: white;
+    padding: 5px;
+    text-decoration: underline;
+}
+
+
+a:active {
+    color: red;
+    background-color: white;
+    padding: 5px;
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<a href="#" id="link1">Link 1</a><br>
+<a href="#" id="link2">Link 2</a><br>
+
+<div id="div1">Div 1</div><br>
+<div id="div2">Div 2</div><br>
+
+<script>
+document.getElementById("link1").onclick = function() {
+    document.getElementById("div1").style.backgroundColor = "yellow";
+    document.getElementById("div1").style.color = "black";
+}
+
+document.getElementById("link2").onclick = function() {
+    document.getElementById("div2").style.border = "10px dotted green";
+}
+</script>
+
+</body>
+</html>
