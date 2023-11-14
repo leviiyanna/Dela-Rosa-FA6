@@ -1,43 +1,68 @@
 <DOCTYPE html>
 <html>
 <head>
-    <style>
-        a {
-            float: left;
-            color: black;
-            text-decoration: none;
-        }
-        a:hover {
-            color: red;
-            background-color: yellow;
-        }
-        a:active {
-            color: blue;
-            background-color: white;
-        }
-        a:visited {
-            color: green;
-            background-color: lightgray;
-        }
-        div {
+<style>
+
+a:link {
+    float: left;
+    color: black;
+    background-color: white;
+    border: solid black 1px;
+    padding: 1px;
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: blue;
+    background-color: white;
+    padding: 1px;
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: green;
+    background-color: white;
+    padding: 1px;
+    text-decoration: underline;
+}
+
+
+a:active {
+    color: red;
+    background-color: white;
+    padding: 1px;
+    text-decoration: underline;
+}
+
+ div {
             clear: both;
             padding: 10px;
             margin: 10px;
             border: 1px solid black;
         }
-    </style>
-    <script>
-        function changeBackground(element) {
-            document.getElementById("div1").style.backgroundColor = "pink";
-            document.getElementById("div1").style.color = "black";
-            document.getElementById("div2").style.border = "10px dotted green";
-        }
-    </script>
+    
+</style>
 </head>
 <body>
-    <a href="#" onclick="changeBackground(this)">Link 1</a><br>
-    <a href="#">Link 2</a><br>
-    <div id="div1">Div 1</div>
-    <div id="div2">Div 2</div>
+
+<a href="#" id="link1" >First Link</a><br>
+<a href="#" id="link2">Second Link</a><br>
+
+<div id="div1">Div 1</div><br>
+<div id="div2">Div 2</div><br>
+
+<script>
+document.getElementById("link1").onclick = function() {
+    document.getElementById("div1").style.backgroundColor = "pink";
+    document.getElementById("div1").style.color = "black";
+}
+
+document.getElementById("link2").onclick = function() {
+    document.getElementById("div2").style.border = "10px dotted green";
+}
+</script>
+
 </body>
 </html>
