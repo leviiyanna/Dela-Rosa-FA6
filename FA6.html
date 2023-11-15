@@ -1,68 +1,78 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-<style>
-
-a:link {
-    color: black;
-    background-color: #ffe4e1;
-    border: solid black 1px;
-    padding: 1px;
-    text-decoration: none;
-}
-
-
-a:visited {
-    color: blue;
-    background-color: #ffe4e1;
-    padding: 1px;
-    text-decoration: none;
-}
-
-
-a:hover {
-    color: green;
-    background-color: #ffc0cb;
-    padding: 1px;
-    text-decoration: underline;
-}
-
-
-a:active {
-    color: red;
-    background-color: #ffc0cb;
-    padding: 1px;
-    text-decoration: underline;
-}
-
- div {
-            clear: both;
-            padding: 10px;
-            margin: 10px;
-            border: 1px solid black;
-        }
+  <head>
+    <title>Formative Assessment 6</title>
+    <style>
     
-</style>
-</head>
-<body>
+    a:link {
+      color: white;
+      background-color: pink;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: white;
+      background-color: pink;
+      text-decoration: underline;
+    }
+    
+    a:hover {
+      color: white;
+      background-color: #F1948A;
+      text-decoration: none;
+    }
+    
+    a:active {
+      color: white;
+      background-color: blue;
+      text-decoration: none;
+    }
+    
+    #div1 {
+      border: 2px solid black;
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+      margin: 15px 0;
+      text-align: center;
+    }
+    
+    #div2 {
+      border: 2px solid black;
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    #div1:target {
+      color: white;
+      background-color: pink;
+    }
+    
+    #div2:target {
+      border: 10px dotted green;
+      background-color: red;
+      color: white;
+    }
+    
+    </style>
+  </head>
+  <body>
+  
+ 
+  <a href="#div1">First Link</a>
+  <a href="#div2">Second Link</a>
+  
+ 
+  <div id="div1">
+    <p> Div 1 here </p>
+  </div>
+  
+  <div id="div2">
+    <p> Div 2 here </p>
+  </div>
+ 
 
-<a href="#" id="link1" >First Link</a><br>
-<a href="#" id="link2">Second Link</a><br>
-
-<div id="div1">Div 1</div><br>
-<div id="div2">Div 2</div><br>
-
-<script>
-document.getElementById("link1").onclick = function() {
-    document.getElementById("div1").style.backgroundColor = "#ffc0cb";
-    document.getElementById("div1").style.color = "black";
-}
-
-document.getElementById("link2").onclick = function() {
-    document.getElementById("div2").style.backgroundColor = "#ffe4e1";
-    document.getElementById("div2").style.border = "10px dotted green";
-}
-</script>
-
-</body>
+  </body>
 </html>
